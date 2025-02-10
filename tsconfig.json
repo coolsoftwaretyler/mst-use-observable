@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "outDir": "dist",
+      "sourceMap": true,
+      "inlineSources": true,
+      "declaration": true,
+      "jsx": "react"
+    },
+    "include": ["src"]
+  }
+
