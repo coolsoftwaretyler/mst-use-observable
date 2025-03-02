@@ -1,1 +1,1 @@
-export * from "./useObservable"
+export { useObservable } from "./useObservable.js"
