@@ -30,7 +30,7 @@ export function useObservable<T extends IStateTreeNode>(model: T) {
                             .forEach(key => {
                                 const nestedProp = key.split(".")[1]
                                 if (nestedProp) {
-                                nested[nestedProp] = value[nestedProp as keyof typeof value]
+                                    nested[nestedProp] = value[nestedProp as keyof typeof value]
                                 }
                             })
                         return { value, ...nested }

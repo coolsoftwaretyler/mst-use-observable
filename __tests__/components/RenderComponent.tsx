@@ -1,10 +1,9 @@
-import * as React from "react"
-import { store } from "./exampleModel"
+import { store } from "./exampleModel.js"
 import { observer } from "mobx-react-lite"
 
 // import { useObservable } from "../../src/useObservable"
 
-export default observer(  function HookPage() {
+export default observer(function HookPage() {
     const {
         count,
         submodel: { title, allCaps, volatileProperty }
@@ -54,5 +53,4 @@ export default observer(  function HookPage() {
             </div>
         </div>
     )
-}
-)
+})
