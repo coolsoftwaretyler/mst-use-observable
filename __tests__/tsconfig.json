@@ -2,9 +2,9 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "rootDir": "../",
-    "types": ["jest", "@testing-library/jest-dom"],
+    "types": ["bun", "@testing-library/jest-dom"],
     "jsx": "react-jsx"
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "matchers.d.ts"]
 }
 

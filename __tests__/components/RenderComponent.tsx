@@ -1,13 +1,12 @@
+import React from "react"
 import { store } from "./exampleModel.js"
-import { observer } from "mobx-react-lite"
+import { useObservable } from "../../src/useObservable.js"
 
-// import { useObservable } from "../../src/useObservable"
-
-export default observer(function HookPage() {
+export default function HookPage() {
     const {
         count,
         submodel: { title, allCaps, volatileProperty }
-    } = store //  = useObservable(store)
+    } = useObservable(store)
 
     return (
         <div className="App bg-white p-8 min-h-screen">
@@ -53,4 +52,4 @@ export default observer(function HookPage() {
             </div>
         </div>
     )
-})
+}
