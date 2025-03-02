@@ -45,3 +45,38 @@ export default function App() {
   );
 }
 ```
+
+## Development
+
+Built with [Bun](https://bun.sh/). PRs welcome, especially if they include new test cases and docs.
+
+### Install dependencies
+
+```sh
+bun install
+```
+
+### Run tests
+
+```sh
+bun test
+```
+
+### Build
+
+```sh
+bun run build
+```
+
+### Type Check
+
+```sh
+bun run typecheck
+```
+
+### Linting and Prettier
+
+```sh
+bun run lint # ESLint
+bun run format # Prettier write
+```
