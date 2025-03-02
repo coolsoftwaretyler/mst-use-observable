@@ -1,15 +1,47 @@
-# MST-React the mobx-state-tree react bridge
+# mst-use-observable
 
-Goal: provide React Hook(s) for enabling MST+React that is compatible with the React Compiler
+A way to use [MobX-State-Tree](https://mobx-state-tree.js.org/intro/welcome) without `observer` Higher Order Components. This hook makes MST compatible with the [React Compiler](https://react.dev/learn/react-compiler).
+
+[Video introduction](https://www.youtube.com/watch?v=NsFD-1HkJNU)
+
+[Original demo repo with Remix](https://github.com/coolsoftwaretyler/react-compiler-demo-with-mobx-state-tree)
 
 ## Installation
 
-You can install the package from github with:
+```sh
+npm install mst-use-observable
 ```
-npm install git+https://github.com/coolsoftwaretyler/mst-use-observable.git
+
+## Usage
+
+```tsx
+import { t } from "mobx-state-tree";
+import { useObservable } from "mst-use-observable";
+
+const RootStoreModel = t
+  .model("RootStoreModel", {
+    count: t.number,
+  })
+  .actions((self) => ({
+    increment() {
+      self.count += 1;
+    },
+    decrement() {
+      self.count -= 1;
+    },
+  }));
+
+const store = RootStoreModel.create({ count: 0 });
+
+export default function App() {
+  const { count } = useObservable(store);
+
+  return (
+    <div className="App">
+      <p>{count}</p>
+      <button onClick={store.increment}>+</button>
+      <button onClick={store.decrement}>-</button>
+    </div>
+  );
+}
 ```
-
-## WIP
-
-this is a work in progress still, but it also can be used as-is (more validation is in the works)
-
