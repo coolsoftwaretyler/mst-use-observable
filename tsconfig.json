@@ -1,11 +1,25 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "sourceMap": true,
-      "inlineSources": true,
-      "declaration": true,
-      "jsx": "react"
-    },
-    "include": ["src"]
-  }
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
 
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true,
+
+    "declaration": true,
+
+    "lib": ["es2022", "dom", "dom.iterable"]
+  },
+  "include": ["src/**/*"]
+}

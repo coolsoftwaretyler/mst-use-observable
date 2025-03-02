@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { IStateTreeNode, getSnapshot } from "mobx-state-tree"
+import { getSnapshot } from "mobx-state-tree"
+import type { IStateTreeNode } from "mobx-state-tree"
 import { reaction } from "mobx"
 
 function isMSTNode(value: unknown): value is IStateTreeNode {
@@ -28,7 +29,9 @@ export function useObservable<T extends IStateTreeNode>(model: T) {
                             .filter(key => key.startsWith(`${prop}.`))
                             .forEach(key => {
                                 const nestedProp = key.split(".")[1]
+                                if (nestedProp) {
                                 nested[nestedProp] = value[nestedProp as keyof typeof value]
+                                }
                             })
                         return { value, ...nested }
                     }
