@@ -17,13 +17,16 @@
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" \"__tests__/**/*.{ts,tsx}\" --fix",
     "prepare": "npm run build"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "mobx": ">=6.13.6",
+    "mobx-state-tree": ">=5.0.0",
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
     "mobx": "^6.13.6",
     "mobx-react-lite": "^4.1.0",
     "mobx-state-tree": "^7.0.0",
-    "react": "^19.0.0"
-  },
-  "devDependencies": {
+    "react": "^19.0.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-node-resolve": "^15.0.0",
