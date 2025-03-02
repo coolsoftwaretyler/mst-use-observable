@@ -1,6 +1,6 @@
 # mst-use-observable
 
-A way to use [MobX-State-Tree](https://mobx-state-tree.js.org/intro/welcome) without `observer` Higher Order Components. This hook makes MST compatible with the [React Compiler](https://react.dev/learn/react-compiler).
+A way to use [MobX-State-Tree](https://mobx-state-tree.js.org/intro/welcome) without `observer` Higher Order Components. This hook makes MST compatible with the [React Compiler](https://react.dev/learn/react-compiler). MST stays reactive and type safe.
 
 [Video introduction](https://www.youtube.com/watch?v=NsFD-1HkJNU)
 
