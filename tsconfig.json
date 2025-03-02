@@ -19,7 +19,8 @@
 
     "declaration": true,
 
-    "lib": ["es2022", "dom", "dom.iterable"]
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "types": ["bun"],
   },
   "include": ["src/**/*"]
 }
