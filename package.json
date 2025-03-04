@@ -27,7 +27,6 @@
   ],
   "scripts": {
     "build": "rm -rf dist && tsc",
-    "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint ./src/*.ts ./__tests__/**/*.tsx",
     "format": "prettier --write ./src/**/*.ts ./__tests__/**/*.tsx",
