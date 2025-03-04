@@ -1,3 +1,14 @@
+/**
+ *  We are specifically omitting:
+ *
+ * 1. `types.literal` since this doesn't tend to get observed
+ * 2. `types.null` since this is just the type of `null`
+ * 3. `types.undefined`, since this is just the type of `undefined
+ * 4. `types.late` since this is mostly for TypeScript
+ * 5. `types.compose` since I expect this will want its own test suite
+ * 6. `types.reference` and `types.safeReference` since I expect these will want their own test suites
+ * 7. `types.snapshotProcessor` since I expect these will want their own test suites.
+ */
 import { t, type Instance } from "mobx-state-tree"
 import { useObservable } from "../src/useObservable.js"
 import { render, screen, waitFor } from "@testing-library/react"
