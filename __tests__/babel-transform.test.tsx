@@ -23,7 +23,6 @@ describe("Babel transform tests", () => {
                         logger: {
                             logEvent(_filename: string | null, event: LoggerEvent) {
                                 if (event.kind === "CompileSuccess") {
-                                    console.log("event", event)
                                     successfulCompileCount++
                                 }
                             }
