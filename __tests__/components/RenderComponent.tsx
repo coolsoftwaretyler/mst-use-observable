@@ -1,4 +1,3 @@
-import React from "react"
 import { store } from "./exampleModel.js"
 import { useObservable } from "../../src/useObservable.js"
 
